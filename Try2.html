@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(20, 198, 204, 0.76);
+            overflow: hidden;
+        }
+        .container {
+            font-size: 10px;
+            width: 40em;
+            height: 40em;
+            position: relative;
+        }
+        .sun{
+            position: absolute;
+            top: 15em;
+            left: 15em;
+            width: 10em;
+            height: 10em;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 3em white;
+        }
+        .earth,.moon{
+            position:absolute;
+            border-style: solid;
+            border-color: white
+            transparent
+            transparent
+            transparent;
+            border-width: 0.1em o.1em 0 0;
+            border-radius: 50%;
+        }
+        .earth{
+            top: 5em;
+            left: 5em;
+            width: 30em;
+            height: 30em;
+            animation: orbit 36.5s
+            linear infinite;
+        }
+        .moon{
+            top: 0;
+            right: 0;
+            width: 8em;
+            height: 8em;
+            animation: orbit 2.7s
+            linear infinite;
+        }
+        .earth::before,
+        .moon::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        .earth::before{
+            top: 2.8em;
+            right: 2.8em;
+            width: 3em;
+            height: 3em;
+            background-color: aqua;
+        }
+        .moon::before{
+            top: 0.8em;
+            right: 0.2em;
+            width: 1.2em;
+            height: 1.2em;
+            background-color: silver;
+        }
+        @keyframes orbit {
+            to {
+            transform: rotate(
+                360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container" >
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+    <form>
+    <div class="main">
+        <div class="register">
+            <form id="register" method="post">
+                <label>First Name : </label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="Enter Your First Name">
+                <br><br>
+                <label>Last Name : </label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="Enter Your Last Name">
+                <br><br>
+                <label>Your Age : </label>
+                <br>
+                <input type="number" name="age" id="name" placeholder="How old are you?">
+                <br><br>
+                <label>Email : </label>
+                <br>
+                <input type="email" name="email" id="name" placeholder="Enter your Email">
+                <br><br>
+                <label>Gender : </label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male">
+                &nbsp;
+                <span id="male">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="fname">
+                &nbsp;
+                <span id="feemale">Female</span>
+                <br><br>
+                <label></label>
+                <label>Known Language : </label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="chines">
+                &nbsp;
+                <span id="chines">Chines</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="eng">
+                &nbsp;
+                <span id="eng">English</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="ai">
+                &nbsp;
+                <span id="eng">AI</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="khmer">
+                &nbsp;
+                <span id="khmer">Khmer</span>
+                <br><br>
+                <input type="submit" value="Submit" name="span" id="submit">
+            </form>
+        </div>
+    </div>
+</form>
+</body>
+</html>
